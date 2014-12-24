@@ -53,6 +53,7 @@ $Config{Strict} = <%= @Strict %>
 <% if defined? @TimestampFile -%>
 $Config{TimestampFile} = <%= @TimestampFile %>
 <% end -%>
+<% if defined? @UbiquitousMakefiles -%>
 $Config{UbiquitousMakefiles} = [ qw(
 <%   @UbiquitousMakefiles.each do value -%>
 	<%= value %>
