@@ -44,4 +44,8 @@ class freebsd_portindex::config {
       File[$::freebsd_portindex::CacheDir],
     ],
   }
+
+  if defined(Class[freebsd_portshaker]) {
+    Class['freebsd_portshaker'] -> Exec['cache-init']
+  }
 }
