@@ -1,0 +1,67 @@
+# Managed Puppet
+#
+
+<% if defined? @CacheDir -%>
+$Config{CacheDir} = <%= @CacheDir %>
+<% end -%>
+<% if defined? @CacheFilename -%>
+$Config{CacheFilename} = <%= @CacheFilename %>
+<% end -%>
+<% if defined? @CrunchWhitespace -%>
+$Config{CrunchWhitespace} = <%= @CrunchWhitespace %>
+<% end -%>
+<% if defined? @EndemicMakefiles -%>
+$Config{EndemicMakefiles} = [ qw(
+<%   @EndemicMakefiles.each do value -%>
+	<%= value %>
+<%   end -%>
+) ];
+<% end -%>
+<% if defined? @Format -%>
+$Config{Format} = <%= @Format %>
+<% end -%>
+<% if defined? @Input -%>
+$Config{Input} = <%= @Input %>
+<% end -%>
+<% if defined? @Output -%>
+$Config{Output} = <%= @Output %>
+<% end -%>
+<% if defined? @PortDBDir -%>
+$Config{PortDBDir} = <%= @PortDBDir %>
+<% end -%>
+<% if defined? @OutputStyle -%>
+$Config{OutputStyle} = <%= @OutputStyle %>
+<% end -%>
+<% if defined? @PortsDir -%>
+$Config{PortsDir} = <%= @PortsDir %>
+<% end -%>
+<% if defined? @ReadmeDir -%>
+$Config{ReadmeDir} = <%= @ReadmeDir %>
+<% end -%>
+<% if defined? @ReadmeTemplateDir -%>
+$Config{ReadmeTemplateDir} = <%= @ReadmeTemplateDir %>
+<% end -%>
+<% if defined? @ScrubEnvironment -%>
+$Config{ScrubEnvironment} = <%= @ScrubEnvironment %>
+<% end -%>
+<% if defined? @ShLibs -%>
+$Config{ShLibs} = <%= @ShLibs %>
+<% end -%>
+<% if defined? @Strict -%>
+$Config{Strict} = <%= @Strict %>
+<% end -%>
+<% if defined? @TimestampFile -%>
+$Config{TimestampFile} = <%= @TimestampFile %>
+<% end -%>
+$Config{UbiquitousMakefiles} = [ qw(
+<%   @UbiquitousMakefiles.each do value -%>
+	<%= value %>
+<%   end -%>
+) ];
+<% end -%>
+<% if defined? @Verbose -%>
+$Config{Verbose} = <%= @Verbose %>
+<% end -%>
+<% if defined? @Warnings -%>
+$Config{Warnings} = <%= @Warnings %>
+<% end -%>
