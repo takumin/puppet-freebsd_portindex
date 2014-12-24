@@ -10,9 +10,11 @@ class freebsd_portindex::params {
       $prefix              = '/usr/local'
       $config              = "$prefix/etc/portindex.cfg"
       $template            = 'freebsd_portindex/portindex.cfg.erb'
+      $zfsdir              = undef
 
-      $CacheDir            = undef
-      $CacheFilename       = undef
+      # portindex parameter
+      $CacheDir            = '/var/db/portindex'
+      $CacheFilename       = 'portindex-cache.db'
       $CrunchWhitespace    = undef
       $EndemicMakefiles    = undef
       $Format              = undef

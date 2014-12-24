@@ -12,6 +12,7 @@ class freebsd_portindex (
   $prefix              = $::freebsd_portindex::params::prefix,
   $config              = $::freebsd_portindex::params::config,
   $template            = $::freebsd_portindex::params::template,
+  $zfsdir              = $::freebsd_portindex::params::zfsdir,
   $CacheDir            = $::freebsd_portindex::params::CacheDir,
   $CacheFilename       = $::freebsd_portindex::params::CacheFilename,
   $CrunchWhitespace    = $::freebsd_portindex::params::CrunchWhitespace,
